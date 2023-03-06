@@ -1,5 +1,7 @@
 package com.example.kotlin_test.lesson1
 
+import android.util.Log
+
 
 data class Data(var cityName:String, var temperature:Int)
 
@@ -11,7 +13,14 @@ enum class TestEnum {
 }
 
 object Database {
-    fun getTestIf():String {
+    fun getTestCycle() {
+       val list = listOf(1,2,3,4,5,6,7)
+        for (one in list){
+            Log.d("mylogs","$one getTestCycle")
+    }
+        list.forEach{  }
+}
+      fun getTestIf():String {
 
         val result = if (0==0) {
             val f1 = 1+23256
