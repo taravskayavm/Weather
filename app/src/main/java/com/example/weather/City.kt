@@ -3,13 +3,15 @@ package com.example.kotlin_test.lesson1
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import com.example.weather.JavaTest
 
 internal open class City constructor (val name:String="defaultName", var temperature: Int=15) {
 
     fun test(testParam: String="Stroka") {
         testParam2 = "Stroka2"
         val testParam3 = testParam2
-    }
+        val javaText :JavaTest = JavaTest()
+     }
 
 
     var  p = ""
@@ -33,7 +35,7 @@ internal open class City constructor (val name:String="defaultName", var tempera
 }
 
 
-internal class CityName : City(), View.OnClickListener{
+internal class CityName (name:String,temperature: Int) : City(), View.OnClickListener{
     override fun onClick(p0: View?) {
     }
 }
